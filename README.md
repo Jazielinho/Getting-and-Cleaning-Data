@@ -4,4 +4,6 @@ Getting-and-Cleaning-Data
 #### 2.- download run_analysis.R
 #### 3.- write R source ("run_analysis.R")
 #### 4.- The "data.set_with_averages.txt" file will be saved
-#### 5.- Use data <- read.table("data.set_with_averages.txt") to read the latter.
+#### 5.- Use data <- read.table("solution_with_averages.txt") to read the latter.
+
+### The Codebook.md file has the code book
