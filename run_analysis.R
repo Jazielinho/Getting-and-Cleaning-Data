@@ -58,4 +58,4 @@ for (i in 1:numSubject) {
 				k<-k+1
 	}
 }
-write.table(solution, "data.set_with_averages.txt")
+write.table(solution, "solution_with_averages.txt")
