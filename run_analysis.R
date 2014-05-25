@@ -1,5 +1,5 @@
 #Change working directory
-#setwd("./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset")
+#setwd("~/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset")
 getwd()
 
 ############################################################################################################################
