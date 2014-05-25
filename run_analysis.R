@@ -4,7 +4,6 @@ getwd()
 
 ############################################################################################################################
 #1.- Merges the training and the test sets to create one data set.
-#Load data
 Xtest<-read.table("./test/X_test.txt")
 Xtrain<-read.table("./train/X_train.txt")
 X<-rbind(Xtest,Xtrain)
@@ -47,17 +46,16 @@ numSubject = length(uniqSubject)
 numActivity = length(Activity[,1])
 numCols = dim(clean)[2]
 limit<-numSubject*numActivity
-result = clean[1:limit, ]
-
+solution = clean[1:limit, ]
+names(clean)
+k<-1
 for (i in 1:numSubject) {
 	for (j in 1:numActivity) {
-			for (k in 1:limit){
-				result[k, 1] = uniqSubject [i]
-				result[k, 2] = Activity[j, 2]
-				tmp <- clean[clean$subject==i & clean$Activity==Activity[j, 2], ]
-				result[k, 3:numCols] <- colMeans(tmp[, 3:numCols])
-			}
+				solution[k, 1] = uniqSubject [i]
+				solution[k, 2] = Activity[j, 2]
+				tmp <- clean[clean$Subject==i & clean$Activity==Activity[j, 2], ]
+				solution[k, 3:numCols] <- colMeans(tmp[, 3:numCols])
+				k<-k+1
 	}
 }
-write.table(result, "data.set_with_averages.txt")
-
+write.table(solution, "data.set_with_averages.txt")
